@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const app = express();
 require("dotenv").config();
@@ -8,7 +9,7 @@ const port = process.env.PORT || 4500;
 //app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
+app.use(cors());
 app.use("/api/v1", page);
 
 const start = async () => {
