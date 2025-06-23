@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const TaskSchema = new mongoose.Schema({
-  name: String,
+  page: Object,
   completed: Boolean,
 });
-const TaskSchema2 = new mongoose.Schema({
-  name: String,
+const PageSchema = new mongoose.Schema({
+  page: Object,
   completed: Boolean,
 });
 
-module.exports = mongoose.model("Part", TaskSchema2);
+module.exports = mongoose.model("Page", PageSchema);

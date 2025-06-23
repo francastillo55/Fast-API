@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { page } = require("../controller");
+const { getAllPages, getPage, createPage } = require("../controller");
 
-router.get("/", page);
+router.get("/", getAllPages);
+router.get("/:id", getPage);
+router.post("/", createPage);
 
 module.exports = router;
